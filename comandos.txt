@@ -1,0 +1,174 @@
+LISTA DE COMANDOS DO GITHUB (por categoria)
+
+- Comandos Básicos do Git
+
+git init - Inicia um repositório Git em um diretório.
+git clone <url> - Clona um repositório remoto para o seu computador.
+git add <arquivo> - Adiciona um arquivo específico ou alterações de arquivo ao índice.
+git add . - Adiciona todas as mudanças no diretório atual ao índice.
+git commit -m "mensagem" - Registra as mudanças no repositório com uma mensagem descritiva.
+git status - Mostra o estado atual do seu repositório.
+git diff - Mostra as diferenças entre arquivos não indexados e o último commit.
+git log - Mostra o histórico de commits.
+git branch - Lista as branches locais.
+git branch <nome> - Cria uma nova branch.
+git checkout <branch> - Muda para uma branch específica.
+git checkout -b <nome> - Cria e muda para uma nova branch.
+git merge <branch> - Funde uma branch específica na branch ativa.
+git remote - Lista repositórios remotos atualmente configurados.
+git remote -v - Lista os URLs dos repositórios remotos.
+git push <remote> <branch> - Envia commits locais para o repositório remoto.
+git pull <remote> <branch> - Puxa mudanças do repositório remoto para a sua branch local.
+git fetch - Busca todas as branches do repositório remoto.
+git reset <arquivo> - Remove um arquivo do índice, mantendo suas alterações locais.
+git reset --hard HEAD - Reseta o estado do seu diretório de trabalho para o último commit.
+
+- Trabalhando com Ramificações (Branches) e Mesclagem (Merging)
+
+git branch - Lista todas as branches locais.
+git branch <nome> - Cria uma nova branch.
+git checkout <branch> - Muda para uma branch específica.
+git checkout -b <nome> - Cria e muda para uma nova branch.
+git merge <branch> - Funde uma branch específica na branch ativa.
+git branch -d <branch> - Deleta uma branch específica.
+git branch -D <branch> - Força a deleção de uma branch (mesmo que não tenha sido mesclada).
+
+- Resolvendo Conflitos
+
+git diff - Mostra as diferenças entre arquivos não indexados e o último commit.
+git diff <branch> <branch> - Mostra as diferenças entre duas branches.
+git mergetool - Inicia uma ferramenta para ajudar a resolver conflitos de mesclagem.
+git add <arquivo> - Adiciona um arquivo resolvido para prepará-lo para um novo commit.
+git commit -m "mensagem" - Registra as mudanças de mesclagem resolvidas.
+
+- Trabalhando com Repositórios Remotos
+
+git remote - Lista repositórios remotos atualmente configurados.
+git remote -v - Lista os URLs dos repositórios remotos.
+git remote add <nome> <url> - Adiciona um novo repositório remoto.
+git push <remote> <branch> - Envia commits locais para o repositório remoto.
+git pull <remote> <branch> - Puxa mudanças do repositório remoto para a sua branch local.
+git fetch - Busca todas as branches do repositório remoto.
+git clone <url> - Clona um repositório remoto para o seu computador.
+
+- Desfazendo Alterações
+git checkout -- <arquivo> - Descarta alterações em um arquivo específico.
+git reset HEAD <arquivo> - Remove um arquivo do índice, mantendo suas alterações locais.
+git reset --hard HEAD - Reseta o estado do seu diretório de trabalho para o último commit.
+git revert <commit> - Desfaz um commit específico, criando um novo commit.
+
+- Histórico e Informações
+
+git log - Mostra o histórico de commits.
+git log --oneline - Mostra o histórico de commits de forma resumida.
+git log --graph - Mostra o histórico de commits em um formato gráfico.
+
+- Trabalhando com Tags e Releases
+
+git tag - Lista todas as tags existentes.
+git tag <nome> - Cria uma nova tag no último commit.
+git tag -a <nome> -m "mensagem" - Cria uma nova tag anotada com uma mensagem.
+git push <remote> <tag> - Envia uma tag específica para o repositório remoto.
+git push <remote> --tags - Envia todas as tags para o repositório remoto.
+git checkout <tag> - Muda para um commit específico identificado por uma tag.
+
+- Trabalhando com Submódulos
+
+git submodule add <url> - Adiciona um submódulo ao seu projeto.
+git submodule init - Inicializa os submódulos do repositório.
+git submodule update - Atualiza os submódulos do repositório para suas versões mais recentes.
+
+- Análise e Depuração
+
+git blame <arquivo> - Mostra quem modificou cada linha de um arquivo e em qual commit.
+git bisect start - Inicia um processo de bisect para encontrar um commit problemático.
+git fsck - Verifica a integridade do repositório Git.
+git reflog - Mostra um registro das operações realizadas no repositório.
+
+- Customização
+
+git config --global user.name "Seu Nome" - Configura o nome do usuário para commits.
+git config --global user.email "seu@email.com" - Configura o email do usuário para commits.
+git config --global core.editor "editor" - Configura o editor padrão para mensagens de commit.
+
+- Ignorando Arquivos
+
+.gitignore - Arquivo no qual você lista os padrões de arquivos a serem ignorados pelo Git.
+git rm --cached <arquivo> - Remove um arquivo do índice e da lista de arquivos rastreados, mantendo-o no disco.
+
+- Trabalhando com Stash
+
+git stash - Salva temporariamente alterações locais que ainda não foram commitadas.
+git stash list - Lista todas as entradas no stash.
+git stash apply - Aplica a entrada mais recente do stash sem removê-la.
+git stash pop - Aplica e remove a entrada mais recente do stash.
+git stash drop - Remove a entrada mais recente do stash.
+
+- Trabalhando com Hooks
+
+.git/hooks/ - Diretório onde você pode colocar scripts para hooks do Git.
+pre-commit - Hook executado automaticamente antes de um commit.
+post-commit - Hook executado automaticamente após um commit.
+
+- Reescrevendo o Histórico
+
+git rebase <branch> - Rebaseia a branch atual a partir de outra branch.
+git rebase -i <commit> - Reescreve o histórico interativamente, permitindo modificar commits.
+
+- Trabalhando com Substituição de Texto
+
+git grep <palavra> - Procura por uma palavra em arquivos rastreados.
+git grep -n <palavra> - Procura por uma palavra em arquivos rastreados, mostrando números de linha.
+
+- Gerenciando Configurações do Git
+
+git config --global --list - Lista todas as configurações globais do Git.
+git config --global alias.<alias> <comando> - Cria um alias para um comando Git.
+
+- Git Workflows Avançados
+
+git rebase - Reorganiza commits em uma sequência linear.
+git cherry-pick <commit> - Aplica um commit específico em outra branch.
+git bisect - Ajuda a identificar a origem de um bug utilizando busca binária.
+
+- Comandos de Limpeza
+
+git clean -n - Mostra quais arquivos seriam removidos pela limpeza.
+git clean -f - Remove os arquivos listados pelo git clean -n.
+
+- Trabalhando com Alias
+
+git config --global alias.<alias> <comando> - Cria um alias para um comando Git.
+git config --global alias.lg "log --oneline --graph --decorate" - Exemplo de alias útil para um log mais informativo.
+
+- Trabalhando com Trabalho em Equipe
+
+git fetch --prune - Busca por referências remotas atualizadas e remove referências locais que não existem mais no remoto.
+git shortlog - Sumariza contribuições por autor.
+git rebase -i HEAD~3 - Reescreve os últimos 3 commits interativamente.
+git pull --rebase - Puxa alterações do repositório remoto e aplica rebase na branch local.
+git push --force - Força o push para o repositório remoto, substituindo o histórico.
+
+- Comandos de Recuperação
+
+git reset --hard HEAD^ - Reseta o branch para o commit anterior, descartando as alterações locais.
+git checkout -- <arquivo> - Descarta alterações não comitadas em um arquivo.
+git checkout <commit> - Move o HEAD para um commit específico (modo detached HEAD).
+
+- Trabalhando com Referências
+
+git show-ref - Mostra referências (branches, tags, etc.) disponíveis no repositório.
+git update-ref - Modifica referências diretamente.
+
+- Trabalhando com Ambientes Remotos
+
+git remote show <remote> - Mostra informações sobre um repositório remoto.
+git remote rename <antigo> <novo> - Renomeia um repositório remoto.
+git remote rm <remote> - Remove a configuração de um repositório remoto.
+
+- Análise de Alterações
+
+git blame <arquivo> - Mostra quem modificou cada linha de um arquivo e em qual commit.
+git shortlog -s -n - Lista todos os autores ordenados pelo número de commits.
+git show <commit> - Mostra as alterações introduzidas por um commit específico.
+git log --author="<nome>" - Filtra o histórico por autor.
